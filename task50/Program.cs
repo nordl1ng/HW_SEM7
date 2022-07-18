@@ -20,21 +20,12 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     System.Console.WriteLine();
 }
 
-System.Console.WriteLine("Введите число для поиска в массиве:");
-int a = Int32.Parse(System.Console.ReadLine());
-int count = 0;
-for (int i = 0; i < matrix.GetLength(0); i++)
+System.Console.WriteLine("Введите строку элемента");
+int line = Int32.Parse(System.Console.ReadLine());
+System.Console.WriteLine("Введите столбец элемента");
+int column = Int32.Parse(System.Console.ReadLine());
+if (line <= matrix.GetLength(0) && column <= matrix.GetLength(1))
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        if (matrix[i, j] == a)
-        {
-            System.Console.WriteLine($"Положение числа {a}: строка {i + 1}, столбец {j + 1}");
-            count++;
-        }
-    }
+    System.Console.WriteLine($"По адресу строка {line}, столбец {column} находится число {matrix [line-1, column-1]}");
 }
-if (count == 0)
-{
-    System.Console.WriteLine("Такого числа нет в массиве");
-}
+else System.Console.WriteLine("такого числа в массиве нет");
