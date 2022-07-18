@@ -20,13 +20,13 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     System.Console.WriteLine();
 }
 System.Console.WriteLine();
-double average = 0;
+double summ = 0;
 for (int j = 0; j < matrix.GetLength(1); j++)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-    average = average + matrix [i,j];
+    summ = summ + matrix [i,j];
     }
-    System.Console.WriteLine($"Среднее значение столбца {j+1} равно {Math.Round(average / (m),1)} ");
-    average = 0;
+    System.Console.WriteLine($"Среднее значение столбца {j+1} равно {Math.Round(summ / (m),1)} ");
+    summ = 0;
 }
